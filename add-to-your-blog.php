@@ -150,7 +150,10 @@
 					$LogHandler->writeToLog("Blog entry added by: " . $lLoggedInUser);	
 				} catch (Exception $e) {
 					// do nothing
+					
 				}//end try
+				
+				echo $CustomErrorHandler->FormatError($e, "Error inserting blog for " . $lLoggedInUser); //Tanya
 				
 			}else{
 				$lValidationFailed = TRUE;
