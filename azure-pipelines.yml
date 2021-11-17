@@ -27,6 +27,7 @@ steps:
       --config=p/r2c-ci $(Build.Repository.LocalPath)
       #semgrep --config=p/r2c-ci $(Build.SourcesDirectory)
 
-
+      #echo | ls $(Build.Repository.LocalPath)
+      echo "$(ls -l $(Build.Repository.LocalPath))"
       echo 'Bye bye SemGrep!'
 
