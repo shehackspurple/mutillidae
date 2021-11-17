@@ -19,22 +19,13 @@ steps:
     targetType: 'inline'
     script: |
       # Write your commands here
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: |
-      # Write your commands here
       
       echo 'Hello SemGrep!'
       
       python3 -m pip install semgrep
-
+      echo $(Build.SourcesDirectory)
       semgrep --config=p/r2c-ci $(Build.SourcesDirectory)
-      echo '**************Attempted to scan Build.SourcesDirectory ***************'
 
-      git clone https://dev.azure.com/hstm-corp/Checkmarx-TFVC/_versionControl?path=%24/Checkmarx-TFVC/NARP
-      unzip *.zip
-      semgrep --config=p/r2c-ci Checkmarx-TFVC/NARP/Main/Code/
 
       echo 'Bye bye SemGrep!'
 
