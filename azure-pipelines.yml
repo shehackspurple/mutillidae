@@ -29,7 +29,7 @@ steps:
       
       python3 -m pip install semgrep
 
-      semgrep --config=p/r2c-ci $(Build.SourcesDirectory))
+      semgrep --config=p/r2c-ci $(Build.SourcesDirectory)
       echo '**************Attempted to scan Build.SourcesDirectory ***************'
 
       git clone https://dev.azure.com/hstm-corp/Checkmarx-TFVC/_versionControl?path=%24/Checkmarx-TFVC/NARP
