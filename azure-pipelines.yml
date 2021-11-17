@@ -28,7 +28,7 @@ steps:
       echo 'Hello SemGrep!'
       
       python3 -m pip install semgrep
-      semgrep --config=p/r2c-ci path/to/src
+      semgrep --config=p/r2c-ci https://github.com/shehackspurple/mutillidae
       
       echo 'Bye bye SemGrep!'
 
