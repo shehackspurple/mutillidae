@@ -24,7 +24,8 @@ steps:
       
       python3 -m pip install semgrep
       echo $(Build.SourcesDirectory)
-      semgrep --config=p/r2c-ci $(Build.SourcesDirectory)
+      --config=p/r2c-ci $(Build.Repository.LocalPath)
+      #semgrep --config=p/r2c-ci $(Build.SourcesDirectory)
 
 
       echo 'Bye bye SemGrep!'
